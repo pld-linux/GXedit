@@ -10,3 +10,4 @@ Exec=gxedit
 Icon=gnome-note.png
 Terminal=0
 Type=Application
+# vi: encoding=utf-8
