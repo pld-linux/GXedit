@@ -2,7 +2,7 @@ Summary: 	A multi-function text editor using GTK+
 Summary(pl):	Wielofunkcyjny edytor tekstu wykorzystuj±cy GTK+
 Name:		GXedit
 Version:	1.23
-Release:	4
+Release:	5
 Group:		X11/Applications/Editors
 Group(pl):	X11/Aplikacje/Edytory
 Copyright:	Freely distributable
@@ -41,7 +41,7 @@ nie wp³ywa³a zbytnio na objêto¶æ samego programu.
 
 %build
 sed s^/usr/doc/GXedit/^%{_defaultdocdir}/%{name}-%{version}/^g gxedit.c > gxedit.c.new
-mv gxedit.c.new gxedit.c
+mv -f gxedit.c.new gxedit.c
 
 make OPTFLAGS="$RPM_OPT_FLAGS -Wall" gxe
 
@@ -50,8 +50,8 @@ rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{_bindir},/etc/applnk/Editors}
 
 make install \
-	SHARE=$RPM_BUILD_ROOT%{_datadir} \
-	INSTALL_DIR=$RPM_BUILD_ROOT%{_bindir}
+	SHARE=$RPM_BUILD_ROOT%{_datadir}/ \
+	INSTALL_DIR=$RPM_BUILD_ROOT%{_bindir}/
 
 install %{SOURCE1} $RPM_BUILD_ROOT/etc/applnk/Editors
 
