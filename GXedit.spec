@@ -54,13 +54,13 @@ utiliza o GTK+.
 sed s^/usr/doc/GXedit/^%{_defaultdocdir}/%{name}-%{version}/^g gxedit.c > gxedit.c.new
 mv -f gxedit.c.new gxedit.c
 
-make OPTFLAGS="$RPM_OPT_FLAGS -Wall" gxe
+%{__make} OPTFLAGS="$RPM_OPT_FLAGS -Wall" gxe
 
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{_bindir},%{_applnkdir}/Office/Editors}
 
-make install \
+%{__make} install \
 	SHARE=$RPM_BUILD_ROOT%{_datadir}/ \
 	INSTALL_DIR=$RPM_BUILD_ROOT%{_bindir}/
 
