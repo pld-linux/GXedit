@@ -17,8 +17,6 @@ Patch3:		%{name}-time.patch
 BuildRequires:	gtk+-devel >= 1.2.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define		_prefix		/usr/X11R6
-%define		_mandir		%{_prefix}/man
 
 %description
 Here is a fast, easy-to-use editor which is both network oriented and
