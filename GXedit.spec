@@ -1,5 +1,5 @@
 Summary:	A multi-function text editor using GTK+
-Summary(es):	Editor de textos multifunciones que usa GTK+
+Summary(es):	Editor multifuncional de textos que usa GTK+
 Summary(pl):	Wielofunkcyjny edytor tekstu wykorzystuj±cy GTK+
 Summary(pt):	Editor de textos multifunção que usa o GTK+
 Name:		GXedit
@@ -25,9 +25,6 @@ very secure. GXedit is a graphical text editor which features a
 toolbar, network bar and tooltips, spell checking, inline help, the
 ability to send text as e-mail, macros and more. GXedit was designed
 to balance these and many other features without becoming too bloated.
-
-%description -l es
-Editor de textos multifunciones que usa GTK+.
 
 %description -l pl
 Oto szybki, ³atwy w obs³udze edytor, który jest nastawiony na pracê w
