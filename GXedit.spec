@@ -7,13 +7,13 @@ Version:	1.23
 Release:	11
 License:	GPL
 Group:		X11/Applications/Editors
-Source0:	http://users.linuxbox.com/~drow/GXedit/%{name}%{version}.tar.gz
+# working: ftp://ibiblio.org/pub/Linux/apps/editors/X/%{name}-%{version}.tar.gz
+Source0:	%{name}%{version}.tar.gz
 Source1:	%{name}.desktop
 Patch0:		%{name}-config.patch
 Patch1:		%{name}-makefile.patch
 Patch2:		%{name}-nobash.patch
 Patch3:		%{name}-time.patch
-URL:		http://www.linuxbox.com/~drow/GXedit/
 BuildRequires:	gtk+-devel >= 1.2.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
