@@ -20,12 +20,11 @@ Buildroot:	/tmp/%{name}-%{version}-root
 %define		_mandir	/usr/X11R6/man
 
 %description
-Here is a fast, easy-to-use editor which is both network-
-oriented and very secure. GXedit is a graphical text editor
-which features a toolbar, network bar and tooltips, spell
-checking, inline help, the ability to send text as e-mail, 
-macros and more. GXedit was designed to balance these and
-many other features without becoming too bloated.
+Here is a fast, easy-to-use editor which is both network oriented and very
+secure. GXedit is a graphical text editor which features a toolbar, network
+bar and tooltips, spell checking, inline help, the ability to send text as
+e-mail, macros and more. GXedit was designed to balance these and many other
+features without becoming too bloated.
 
 %description -l pl
 Oto szybki, ³atwy w obs³udze edytor, który jest nastawiony na pracê w sieci,
