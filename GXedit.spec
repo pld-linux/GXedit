@@ -4,7 +4,7 @@ Summary(pl):	Wielofunkcyjny edytor tekstu wykorzystuj±cy GTK+
 Summary(pt):	Editor de textos multifunção que usa o GTK+
 Name:		GXedit
 Version:	1.23
-Release:	11
+Release:	12
 License:	GPL
 Group:		X11/Applications/Editors
 # working: ftp://ibiblio.org/pub/Linux/apps/editors/X/%{name}-%{version}.tar.gz
