@@ -64,7 +64,7 @@ rm -r $RPM_BUILD_ROOT
 %doc {docs/manual.txt,docs/manual.ps,docs/quickref.txt,docs/quickref.ps}.gz
 %doc {README,CHANGELOG,docs/DEPENDENCIES}.gz example.gxeditrc
 
-%attr(755,root,root) /usr/X11R6/bin/
+%attr(755,root,root) /usr/X11R6/bin/*
 
 /usr/X11R6/share/gnome/apps/Applications/GXedit.desktop
 /usr/X11R6/share/GXedit
