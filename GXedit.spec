@@ -19,11 +19,10 @@ URL:		http://www.linuxbox.com/~drow/GXedit/
 BuildRequires:	gtk+-devel >= 1.2.0
 BuildRequires:	glib-devel >= 1.2.0
 BuildRequires:	XFree86-devel
-Buildroot:	/tmp/%{name}-%{version}-root
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_prefix		/usr/X11R6
 %define		_mandir		%{_prefix}/man
-%define		_applnkdir	%{_datadir}/applnk
 
 %description
 Here is a fast, easy-to-use editor which is both network oriented and very
