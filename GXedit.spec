@@ -17,8 +17,6 @@ Patch1: 	GXedit-makefile.patch
 Patch2:		GXedit-nobash.patch
 URL:		http://www.linuxbox.com/~drow/GXedit/
 BuildRequires:	gtk+-devel >= 1.2.0
-BuildRequires:	glib-devel >= 1.2.0
-BuildRequires:	XFree86-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_prefix		/usr/X11R6
