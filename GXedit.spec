@@ -9,6 +9,7 @@ License:	GPL
 Group:		X11/Applications/Editors
 # working: ftp://ibiblio.org/pub/Linux/apps/editors/X/%{name}-%{version}.tar.gz
 Source0:	%{name}%{version}.tar.gz
+# Source0-md5:	afbd834a2fbb73b598e600f23655c13d
 Source1:	%{name}.desktop
 Patch0:		%{name}-config.patch
 Patch1:		%{name}-makefile.patch
