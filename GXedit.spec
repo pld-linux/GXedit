@@ -47,13 +47,13 @@ make OPTFLAGS="$RPM_OPT_FLAGS -Wall" gxe
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT{%{_bindir},/etc/applnk/Editors}
+install -d $RPM_BUILD_ROOT{%{_bindir},/etc/X11/applnk/Editors}
 
 make install \
 	SHARE=$RPM_BUILD_ROOT%{_datadir}/ \
 	INSTALL_DIR=$RPM_BUILD_ROOT%{_bindir}/
 
-install %{SOURCE1} $RPM_BUILD_ROOT/etc/applnk/Editors
+install %{SOURCE1} $RPM_BUILD_ROOT/etc/X11/applnk/Editors
 
 gzip -9nf docs/manual.txt docs/manual.ps docs/quickref.txt docs/quickref.ps \
 	README CHANGELOG docs/DEPENDENCIES
@@ -68,7 +68,7 @@ rm -r $RPM_BUILD_ROOT
 
 %attr(755,root,root) %{_bindir}/*
 
-/etc/applnk/Editors/GXedit.desktop
+/etc/X11/applnk/Editors/GXedit.desktop
 %{_datadir}/GXedit
 
 %changelog
