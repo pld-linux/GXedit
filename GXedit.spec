@@ -7,10 +7,6 @@ Version:	1.23
 Release:	10
 License:	GPL
 Group:		X11/Applications/Editors
-Group(de):	X11/Applikationen/Editors
-Group(es):	X11/Aplicaciones/Editores
-Group(pl):	X11/Aplikacje/Edytory
-Group(pt):	X11/Aplicações/Editores
 Source0:	http://users.linuxbox.com/~drow/GXedit/%{name}%{version}.tar.gz
 Source1:	%{name}.desktop
 Patch0:		%{name}-config.patch
