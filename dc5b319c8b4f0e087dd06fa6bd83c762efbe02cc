@@ -1,0 +1,2 @@
+- release 7,
+- added nobash patch - now GXedit depends on /bin/sh instead /bin/bash.
