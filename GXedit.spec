@@ -4,7 +4,7 @@ Summary(pl):	Wielofunkcyjny edytor tekstu wykorzystuj±cy GTK+
 Summary(pt_BR):	Editor de textos multifunção que usa o GTK+                                                   
 Name:		GXedit
 Version:	1.23
-Release:	6
+Release:	7
 Group:		X11/Applications/Editors
 Group(es):	X11/Aplicaciones/Editores
 Group(pl):	X11/Aplikacje/Edytory
@@ -14,6 +14,7 @@ Source0:	http://users.linuxbox.com/~drow/GXedit/%{name}%{version}.tar.gz
 Source1:	GXedit.desktop
 Patch0:		GXedit-config.patch
 Patch1: 	GXedit-makefile.patch
+Patch2:		GXedit-nobash.patch
 URL:		http://www.linuxbox.com/~drow/GXedit/
 BuildRequires:	gtk+-devel >= 1.2.0
 BuildRequires:	glib-devel >= 1.2.0
@@ -49,6 +50,7 @@ GTK+.
 %setup -n %{name}%{version} -q
 %patch0 -p1
 %patch1 -p1
+%patch2 -p1
 
 %build
 sed s^/usr/doc/GXedit/^%{_defaultdocdir}/%{name}-%{version}/^g gxedit.c > gxedit.c.new
