@@ -4,7 +4,7 @@ Summary(pl):	Wielofunkcyjny edytor tekstu wykorzystuj±cy GTK+
 Summary(pt):	Editor de textos multifunção que usa o GTK+
 Name:		GXedit
 Version:	1.23
-Release:	12
+Release:	13
 License:	GPL
 Group:		X11/Applications/Editors
 # working: ftp://ibiblio.org/pub/Linux/apps/editors/X/%{name}-%{version}.tar.gz
@@ -56,13 +56,13 @@ mv -f gxedit.c.new gxedit.c
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT{%{_bindir},%{_applnkdir}/Editors}
+install -d $RPM_BUILD_ROOT{%{_bindir},%{_desktopdir}}
 
 %{__make} install \
 	SHARE=$RPM_BUILD_ROOT%{_datadir}/ \
 	INSTALL_DIR=$RPM_BUILD_ROOT%{_bindir}/
 
-install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Editors
+install %{SOURCE1} $RPM_BUILD_ROOT%{_desktopdir}
 
 %clean
 rm -r $RPM_BUILD_ROOT
@@ -74,5 +74,5 @@ rm -r $RPM_BUILD_ROOT
 
 %attr(755,root,root) %{_bindir}/*
 
-%{_applnkdir}/Editors/GXedit.desktop
+%{_desktopdir}/GXedit.desktop
 %{_datadir}/GXedit
