@@ -6,6 +6,7 @@ Comment[fr]=Editeur de texte
 Comment[no]=Tekstredigering
 Comment[pl]=Edytor tekstu
 Comment[pt]=Editor de texto
+Comment[pt_BR]=Editor de texto
 Exec=gxedit
 Icon=gnome-note.png
 Terminal=0
