@@ -16,7 +16,8 @@ BuildRequires:	glib-devel >= 1.2.0
 BuildRequires:	XFree86-devel
 Buildroot:	/tmp/%{name}-%{version}-root
 
-%define _prefix         /usr/X11R6
+%define		_prefix	/usr/X11R6
+%define		_mandir	/usr/X11R6/man
 
 %description
 Here is a fast, easy-to-use editor which is both network-
