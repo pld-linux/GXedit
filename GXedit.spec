@@ -4,17 +4,19 @@ Summary(pl):	Wielofunkcyjny edytor tekstu wykorzystuj±cy GTK+
 Summary(pt):	Editor de textos multifunção que usa o GTK+
 Name:		GXedit
 Version:	1.23
-Release:	9
+Release:	10
+License:	GPL
 Group:		X11/Applications/Editors
+Group(de):	X11/Applikationen/Editors
 Group(es):	X11/Aplicaciones/Editores
 Group(pl):	X11/Aplikacje/Edytory
 Group(pt):	X11/Aplicações/Editores
-License:	GPL
 Source0:	http://users.linuxbox.com/~drow/GXedit/%{name}%{version}.tar.gz
-Source1:	GXedit.desktop
-Patch0:		GXedit-config.patch
-Patch1:		GXedit-makefile.patch
-Patch2:		GXedit-nobash.patch
+Source1:	%{name}.desktop
+Patch0:		%{name}-config.patch
+Patch1:		%{name}-makefile.patch
+Patch2:		%{name}-nobash.patch
+Patch3:		%{name}-time.patch
 URL:		http://www.linuxbox.com/~drow/GXedit/
 BuildRequires:	gtk+-devel >= 1.2.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -49,12 +51,13 @@ utiliza o GTK+.
 %patch0 -p1
 %patch1 -p1
 %patch2 -p1
+%patch3 -p1
 
 %build
 sed s^/usr/doc/GXedit/^%{_defaultdocdir}/%{name}-%{version}/^g gxedit.c > gxedit.c.new
 mv -f gxedit.c.new gxedit.c
 
-%{__make} OPTFLAGS="$RPM_OPT_FLAGS -Wall" gxe
+%{__make} OPTFLAGS="%{!?debug:$RPM_OPT_FLAGS}%{?debug:-O0 -g} -Wall" gxe
 
 %install
 rm -rf $RPM_BUILD_ROOT
