@@ -70,30 +70,3 @@ rm -r $RPM_BUILD_ROOT
 
 /etc/X11/applnk/Editors/GXedit.desktop
 %{_datadir}/GXedit
-
-%changelog
-* Mon May 17 1999 Piotr Czerwiñski <pius@pld.org.pl>
-  [1.23-4]
-- added using more rpm macros,
-- package is now FHS 2.0 compliant.
-
-* Tue Apr 27 1999 Piotr Czerwiñski <pius@pld.org.pl>
-  [1.23-3]
-- cleaned up sepec file for PLD use,
-- added pl translation,
-- added new GXedit.desktop file with translation modified for es fr no pl pt,
-- added GXedit-config.patch instead of gxedit-config.h,
-- added new GXedit-makefile.patch,
-- recompiled on rpm 3.
-
-* Thu Apr 01 1999 Michael Fulbright <drmike@redhat.com>
-- version 1.23
-
-* Fri Mar 19 1999 Michael Fulbright <drmike@redhat.com>
-- strip binaries
-
-* Sun Mar 06 1999 Michael Fulbright <drmike@redhat.com>
-- version 1.22
-
-* Wed Jan 27 1998 Michael Fulbright <drmike@redhat.com>
-- first attempt at spec file
