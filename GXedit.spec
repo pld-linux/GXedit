@@ -11,9 +11,9 @@ Source0:	%{name}%{version}.tar.gz
 Source1:	GXedit.desktop
 Patch0:		GXedit-config.patch
 Patch1: 	GXedit-makefile.patch
-BuildPrereq:	gtk+-devel >= 1.2.0
-BuildPrereq:	glib-devel >= 1.2.0
-BuildPrereq:	XFree86-devel
+BuildRequires:	gtk+-devel >= 1.2.0
+BuildRequires:	glib-devel >= 1.2.0
+BuildRequires:	XFree86-devel
 Buildroot:	/tmp/%{name}-%{version}-root
 
 %define _prefix         /usr/X11R6
