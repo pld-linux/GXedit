@@ -1,10 +1,10 @@
 Summary: 	A multi-function text editor using GTK+
 Summary(es):	Editor de textos multifunciones que usa GTK+
 Summary(pl):	Wielofunkcyjny edytor tekstu wykorzystuj±cy GTK+
-Summary(pt_BR):	Editor de textos multifunção que usa o GTK+ 
+Summary(pt_BR):	Editor de textos multifunção que usa o GTK+
 Name:		GXedit
 Version:	1.23
-Release:	7
+Release:	8
 Group:		X11/Applications/Editors
 Group(es):	X11/Aplicaciones/Editores
 Group(pl):	X11/Aplikacje/Edytory
@@ -21,8 +21,9 @@ BuildRequires:	glib-devel >= 1.2.0
 BuildRequires:	XFree86-devel
 Buildroot:	/tmp/%{name}-%{version}-root
 
-%define		_prefix	/usr/X11R6
-%define		_mandir	/usr/X11R6/man
+%define		_prefix		/usr/X11R6
+%define		_mandir		%{_prefix}/man
+%define		_applnkdir	%{_datadir}/applnk
 
 %description
 Here is a fast, easy-to-use editor which is both network oriented and very
@@ -60,13 +61,13 @@ make OPTFLAGS="$RPM_OPT_FLAGS -Wall" gxe
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT{%{_bindir},%{_datadir}/applnk/Editors}
+install -d $RPM_BUILD_ROOT{%{_bindir},%{_applnkdir}/Editors}
 
 make install \
 	SHARE=$RPM_BUILD_ROOT%{_datadir}/ \
 	INSTALL_DIR=$RPM_BUILD_ROOT%{_bindir}/
 
-install %{SOURCE1} $RPM_BUILD_ROOT/usr/X11R6/share/applnk/Editors
+install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Editors
 
 gzip -9nf docs/manual.txt docs/manual.ps docs/quickref.txt docs/quickref.ps \
 	README CHANGELOG docs/DEPENDENCIES
@@ -81,5 +82,5 @@ rm -r $RPM_BUILD_ROOT
 
 %attr(755,root,root) %{_bindir}/*
 
-/usr/X11R6/share/applnk/Editors/GXedit.desktop
+%{_applnkdir}/Editors/GXedit.desktop
 %{_datadir}/GXedit
