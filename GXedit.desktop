@@ -1,0 +1,12 @@
+[Desktop Entry]
+Name=GXedit
+Comment=Text editor
+Comment[es]=Editor de texto
+Comment[fr]=Editeur de texte
+Comment[no]=Tekstredigering
+Comment[pl]=Edytor tekstu
+Comment[pt]=Editor de texto
+Exec=gxedit
+Icon=gnome-note.png
+Terminal=0
+Type=Application
