@@ -1,14 +1,14 @@
 Summary: 	A multi-function text editor using GTK+
 Summary(es):	Editor de textos multifunciones que usa GTK+
 Summary(pl):	Wielofunkcyjny edytor tekstu wykorzystuj±cy GTK+
-Summary(pt_BR):	Editor de textos multifunção que usa o GTK+                                                   
+Summary(pt_BR):	Editor de textos multifunção que usa o GTK+ 
 Name:		GXedit
 Version:	1.23
 Release:	7
 Group:		X11/Applications/Editors
 Group(es):	X11/Aplicaciones/Editores
 Group(pl):	X11/Aplikacje/Edytory
-Group(pt_BR):	X11/Aplicações/Editores                                                                             
+Group(pt_BR):	X11/Aplicações/Editores
 Copyright:	GPL
 Source0:	http://users.linuxbox.com/~drow/GXedit/%{name}%{version}.tar.gz
 Source1:	GXedit.desktop
@@ -37,7 +37,7 @@ Editor de textos multifunciones que usa GTK+.
 %description -l pl
 Oto szybki, ³atwy w obs³udze edytor, który jest nastawiony na pracê w sieci,
 a przy tym bardzo bezpieczny. GXedit jest graficznym edytorem tekstu, 
-który dostarcza takie funkcje jak pasek narzêdziowy, sprawdzanie pisowni, 
+który dostarcza takich funkcji jak pasek narzêdzi, sprawdzanie pisowni, 
 mo¿liwo¶æ wysy³ania tekstu poczt± elektroniczn±, makra i wiele innych.
 GXedit zosta³ zaprojektowany tak, aby obecno¶æ tych i wielu innych funkcji 
 nie wp³ywa³a zbytnio na objêto¶æ samego programu.
@@ -60,7 +60,7 @@ make OPTFLAGS="$RPM_OPT_FLAGS -Wall" gxe
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT{%{_bindir},/usr/X11R6/share/applnk/Editors}
+install -d $RPM_BUILD_ROOT{%{_bindir},%{_datadir}/applnk/Editors}
 
 make install \
 	SHARE=$RPM_BUILD_ROOT%{_datadir}/ \
