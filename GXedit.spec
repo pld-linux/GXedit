@@ -5,12 +5,12 @@ Version:	1.23
 Release:	5
 Group:		X11/Applications/Editors
 Group(pl):	X11/Aplikacje/Edytory
-Copyright:	Freely distributable
-URL:		http://devplanet.fastethernet.net/gxedit.html
-Source0:	%{name}%{version}.tar.gz
+Copyright:	GPL
+Source0:	http://users.linuxbox.com/~drow/GXedit/%{name}%{version}.tar.gz
 Source1:	GXedit.desktop
 Patch0:		GXedit-config.patch
 Patch1: 	GXedit-makefile.patch
+URL:		http://users.linuxbox.com/~drow/GXedit/
 BuildRequires:	gtk+-devel >= 1.2.0
 BuildRequires:	glib-devel >= 1.2.0
 BuildRequires:	XFree86-devel
