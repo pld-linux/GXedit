@@ -4,7 +4,7 @@ Summary(pl):	Wielofunkcyjny edytor tekstu wykorzystuj±cy GTK+
 Summary(pt):	Editor de textos multifunção que usa o GTK+
 Name:		GXedit
 Version:	1.23
-Release:	8
+Release:	9
 Group:		X11/Applications/Editors
 Group(es):	X11/Aplicaciones/Editores
 Group(pl):	X11/Aplikacje/Edytory
