@@ -1,19 +1,19 @@
-Summary: 	A multi-function text editor using GTK+
+Summary:	A multi-function text editor using GTK+
 Summary(es):	Editor de textos multifunciones que usa GTK+
 Summary(pl):	Wielofunkcyjny edytor tekstu wykorzystuj±cy GTK+
-Summary(pt_BR):	Editor de textos multifunção que usa o GTK+
+Summary(pt):	Editor de textos multifunção que usa o GTK+
 Name:		GXedit
 Version:	1.23
 Release:	8
 Group:		X11/Applications/Editors
 Group(es):	X11/Aplicaciones/Editores
 Group(pl):	X11/Aplikacje/Edytory
-Group(pt_BR):	X11/Aplicações/Editores
-Copyright:	GPL
+Group(pt):	X11/Aplicações/Editores
+License:	GPL
 Source0:	http://users.linuxbox.com/~drow/GXedit/%{name}%{version}.tar.gz
 Source1:	GXedit.desktop
 Patch0:		GXedit-config.patch
-Patch1: 	GXedit-makefile.patch
+Patch1:		GXedit-makefile.patch
 Patch2:		GXedit-nobash.patch
 URL:		http://www.linuxbox.com/~drow/GXedit/
 BuildRequires:	gtk+-devel >= 1.2.0
@@ -23,26 +23,26 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %define		_mandir		%{_prefix}/man
 
 %description
-Here is a fast, easy-to-use editor which is both network oriented and very
-secure. GXedit is a graphical text editor which features a toolbar, network
-bar and tooltips, spell checking, inline help, the ability to send text as
-e-mail, macros and more. GXedit was designed to balance these and many other
-features without becoming too bloated.
+Here is a fast, easy-to-use editor which is both network oriented and
+very secure. GXedit is a graphical text editor which features a
+toolbar, network bar and tooltips, spell checking, inline help, the
+ability to send text as e-mail, macros and more. GXedit was designed
+to balance these and many other features without becoming too bloated.
 
 %description -l es
 Editor de textos multifunciones que usa GTK+.
 
 %description -l pl
-Oto szybki, ³atwy w obs³udze edytor, który jest nastawiony na pracê w sieci,
-a przy tym bardzo bezpieczny. GXedit jest graficznym edytorem tekstu, 
-który dostarcza takich funkcji jak pasek narzêdzi, sprawdzanie pisowni, 
-mo¿liwo¶æ wysy³ania tekstu poczt± elektroniczn±, makra i wiele innych.
-GXedit zosta³ zaprojektowany tak, aby obecno¶æ tych i wielu innych funkcji 
-nie wp³ywa³a zbytnio na objêto¶æ samego programu.
+Oto szybki, ³atwy w obs³udze edytor, który jest nastawiony na pracê w
+sieci, a przy tym bardzo bezpieczny. GXedit jest graficznym edytorem
+tekstu, który dostarcza takich funkcji jak pasek narzêdzi, sprawdzanie
+pisowni, mo¿liwo¶æ wysy³ania tekstu poczt± elektroniczn±, makra i
+wiele innych. GXedit zosta³ zaprojektowany tak, aby obecno¶æ tych i
+wielu innych funkcji nie wp³ywa³a zbytnio na objêto¶æ samego programu.
 
 %description -l pt_BR
-O GXedit é um editor de textos gráficos com múltiplas funções que utiliza o
-GTK+.
+O GXedit é um editor de textos gráficos com múltiplas funções que
+utiliza o GTK+.
 
 %prep
 %setup -n %{name}%{version} -q
