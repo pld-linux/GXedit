@@ -2,7 +2,7 @@ Summary: 	A multi-function text editor using GTK+
 Summary(pl):	Wielofunkcyjny edytor tekstu wykorzystuj±cy GTK+
 Name:		GXedit
 Version:	1.23
-Release:	3
+Release:	4
 Group:		X11/Applications/Editors
 Group(pl):	X11/Aplikacje/Edytory
 Copyright:	Freely distributable
@@ -15,6 +15,8 @@ BuildPrereq:	gtk+-devel >= 1.2.0
 BuildPrereq:	glib-devel >= 1.2.0
 BuildPrereq:	XFree86-devel
 Buildroot:	/tmp/%{name}-%{version}-root
+
+%define _prefix         /usr/X11R6
 
 %description
 Here is a fast, easy-to-use editor which is both network-
@@ -38,20 +40,20 @@ nie wp³ywa³a zbytnio na objêto¶æ samego programu.
 %patch1 -p1
 
 %build
-sed s^/usr/doc/GXedit/^/usr/doc/GXedit-%{version}/^g gxedit.c > gxedit.c.new
+sed s^/usr/doc/GXedit/^%{_defaultdocdir}/%{name}-%{version}/^g gxedit.c > gxedit.c.new
 mv gxedit.c.new gxedit.c
 
 make OPTFLAGS="$RPM_OPT_FLAGS -Wall" gxe
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT/usr/X11R6/{bin,share/gnome/apps/Applications}
+install -d $RPM_BUILD_ROOT{%{_bindir},/etc/applnk/Editors}
 
 make install \
-	SHARE=$RPM_BUILD_ROOT/usr/X11R6/share \
-	INSTALL_DIR=$RPM_BUILD_ROOT/usr/X11R6/bin/
+	SHARE=$RPM_BUILD_ROOT%{_datadir} \
+	INSTALL_DIR=$RPM_BUILD_ROOT%{_bindir}
 
-install %{SOURCE1} $RPM_BUILD_ROOT/usr/X11R6/share/gnome/apps/Applications
+install %{SOURCE1} $RPM_BUILD_ROOT/etc/applnk/Editors
 
 gzip -9nf docs/manual.txt docs/manual.ps docs/quickref.txt docs/quickref.ps \
 	README CHANGELOG docs/DEPENDENCIES
@@ -64,12 +66,17 @@ rm -r $RPM_BUILD_ROOT
 %doc {docs/manual.txt,docs/manual.ps,docs/quickref.txt,docs/quickref.ps}.gz
 %doc {README,CHANGELOG,docs/DEPENDENCIES}.gz example.gxeditrc
 
-%attr(755,root,root) /usr/X11R6/bin/*
+%attr(755,root,root) %{_bindir}/*
 
-/usr/X11R6/share/gnome/apps/Applications/GXedit.desktop
-/usr/X11R6/share/GXedit
+/etc/applnk/Editors/GXedit.desktop
+%{_datadir}/GXedit
 
 %changelog
+* Mon May 17 1999 Piotr Czerwiñski <pius@pld.org.pl>
+  [1.23-4]
+- added using more rpm macros,
+- package is now FHS 2.0 compliant.
+
 * Tue Apr 27 1999 Piotr Czerwiñski <pius@pld.org.pl>
   [1.23-3]
 - cleaned up sepec file for PLD use,
