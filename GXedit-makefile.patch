@@ -1,0 +1,97 @@
+diff -urN GXedit1.23/Makefile GXedit1.23.new/Makefile
+--- GXedit1.23/Makefile	Fri Mar 19 07:01:49 1999
++++ GXedit1.23.new/Makefile	Tue Apr 27 19:14:16 1999
+@@ -1,9 +1,10 @@
+ BIN_DIR =
+ INSTALL = /usr/bin/install
+-INSTALL_DIR = /usr/X11R6/bin/
++#INSTALL_DIR = /usr/X11R6/bin/
+ DOCS = /usr/doc
+-SHARE = /usr/share
+-CFLAGS = `gtk-config --cflags` -I/usr/local/include -I. -O -Wall -DVERSION=\"1.23\"
++#SHARE = /usr/share
++OPTFLAGS = -O -Wall
++CFLAGS = $(OPTFLAGS) `gtk-config --cflags` -I/usr/local/include -I. -DVERSION=\"1.23\"
+ GTKEDITOR_CFLAGS = -I../gtkeditor-0.0.6 -I../gtkeditor-0.0.6/gtkeditor
+ LIBS = `gtk-config --libs`
+ OBJS = gxedit.o net.o utils.o
+@@ -47,26 +48,26 @@
+ 	(cd xproc-src; make clean; cd ..)
+ 
+ install:
+-	$(INSTALL) -m 0755 $(BIN_DIR)gxedit $(INSTALL_DIR)gxedit
+-	$(INSTALL) -m 0755 $(BIN_DIR)xproc $(INSTALL_DIR)xproc
+-	$(INSTALL) -m 0755 $(BIN_DIR)gtk-shell $(INSTALL_DIR)gtk-shell
+-	$(INSTALL) -m 0755 ftp.sh $(INSTALL_DIR)ftp.sh
+-	$(INSTALL) -m 0755 ftp-ls.sh $(INSTALL_DIR)ftp-ls.sh
+-	$(INSTALL) -m 0755 ftp-put.sh $(INSTALL_DIR)ftp-put.sh
++	$(INSTALL) -s $(BIN_DIR)gxedit $(INSTALL_DIR)gxedit
++	$(INSTALL) -s $(BIN_DIR)xproc $(INSTALL_DIR)xproc
++	$(INSTALL) -s $(BIN_DIR)gtk-shell $(INSTALL_DIR)gtk-shell
++	$(INSTALL) ftp.sh $(INSTALL_DIR)ftp.sh
++	$(INSTALL) ftp-ls.sh $(INSTALL_DIR)ftp-ls.sh
++	$(INSTALL) ftp-put.sh $(INSTALL_DIR)ftp-put.sh
+ 	$(INSTALL) -d $(SHARE)/GXedit
+-	$(INSTALL) -m 0644 userinfo.scr $(SHARE)/GXedit/userinfo.scr
+-	$(INSTALL) -m 0644 popmail.scr $(SHARE)/GXedit/popmail.scr
+-	$(INSTALL) -m 0644 traceroute.scr $(SHARE)/GXedit/traceroute.scr
+-	$(INSTALL) -m 0644 www.scr $(SHARE)/GXedit/www.scr
+-	$(INSTALL) -m 0644 docs/charmap.txt $(SHARE)/GXedit/charmap.txt
+-	$(INSTALL) -d $(DOCS)/GXedit
+-	$(INSTALL) -m 0644 docs/manual.txt $(DOCS)/GXedit/manual.txt
+-	$(INSTALL) -m 0644 docs/manual.ps $(DOCS)/GXedit/manual.ps
+-	$(INSTALL) -m 0644 docs/quickref.ps $(DOCS)/GXedit/quickref.ps
+-	$(INSTALL) -m 0644 docs/quickref.txt $(DOCS)/GXedit/quickref.txt
+-	$(INSTALL) -m 0644 docs/COPYING $(DOCS)/GXedit/COPYING
+-	$(INSTALL) -m 0644 README $(DOCS)/GXedit/README
+-	$(INSTALL) -m 0644 CHANGELOG $(DOCS)/GXedit/CHANGELOG
++	$(INSTALL) userinfo.scr $(SHARE)/GXedit/userinfo.scr
++	$(INSTALL) popmail.scr $(SHARE)/GXedit/popmail.scr
++	$(INSTALL) traceroute.scr $(SHARE)/GXedit/traceroute.scr
++	$(INSTALL) www.scr $(SHARE)/GXedit/www.scr
++	$(INSTALL) docs/charmap.txt $(SHARE)/GXedit/charmap.txt
++#	$(INSTALL) -d $(DOCS)/GXedit
++#	$(INSTALL) -m 0644 docs/manual.txt $(DOCS)/GXedit/manual.txt
++#	$(INSTALL) -m 0644 docs/manual.ps $(DOCS)/GXedit/manual.ps
++#	$(INSTALL) -m 0644 docs/quickref.ps $(DOCS)/GXedit/quickref.ps
++#	$(INSTALL) -m 0644 docs/quickref.txt $(DOCS)/GXedit/quickref.txt
++#	$(INSTALL) -m 0644 docs/COPYING $(DOCS)/GXedit/COPYING
++#	$(INSTALL) -m 0644 README $(DOCS)/GXedit/README
++#	$(INSTALL) -m 0644 CHANGELOG $(DOCS)/GXedit/CHANGELOG
+ 
+ distro:
+ 	rm -f *.o $(BIN_DIR)gxedit $(BIN_DIR)say $(BIN_DIR)xproc *.log *.enc core
+diff -urN GXedit1.23/access/Makefile GXedit1.23.new/access/Makefile
+--- GXedit1.23/access/Makefile	Tue Feb 23 07:02:43 1999
++++ GXedit1.23.new/access/Makefile	Tue Apr 27 19:22:20 1999
+@@ -1,6 +1,7 @@
+ BIN_DIR =
+ CC = gcc
+-CFLAGS = -g -O -I. -I/usr/include
++OPTFLAGS = -O -g
++CFLAGS = $(OPTFLAGS) -I. -I/usr/include
+ OBJS = say.o saynum.o darray.o ASCII.o phones.o text.o english.o trie.o phtoelm.o holmes.o elements.o nsynth.o def_pars.o l2u.o aufile.o getarg.o Revision.o hplay.o dict.o
+ 
+ all:
+diff -urN GXedit1.23/gtk-shell-src/Makefile GXedit1.23.new/gtk-shell-src/Makefile
+--- GXedit1.23/gtk-shell-src/Makefile	Fri Mar 19 07:08:47 1999
++++ GXedit1.23.new/gtk-shell-src/Makefile	Tue Apr 27 19:23:26 1999
+@@ -1,5 +1,6 @@
+ BIN_DIR = 
+-CFLAGS = `gtk-config --cflags` -O -I. -Wall
++OPTFLAGS = -O -Wall
++CFLAGS = `gtk-config --cflags` -I. $(OPTFLAGS)
+ LIBS = `gtk-config --libs`
+ CC = gcc
+ 
+diff -urN GXedit1.23/xproc-src/Makefile GXedit1.23.new/xproc-src/Makefile
+--- GXedit1.23/xproc-src/Makefile	Fri Mar 19 07:09:10 1999
++++ GXedit1.23.new/xproc-src/Makefile	Tue Apr 27 19:24:23 1999
+@@ -1,5 +1,6 @@
+ BIN_DIR =
+-CFLAGS = `gtk-config --cflags` -I. -O -Wall
++OPTFLAGS = -O -Wall
++CFLAGS = `gtk-config --cflags` -I. $(OPTFLAGS)
+ LIBS = `gtk-config --libs`
+ 
+ all:

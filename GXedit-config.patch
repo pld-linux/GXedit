@@ -1,0 +1,20 @@
+diff -urN GXedit1.23/config.h GXedit1.23.new/config.h
+--- GXedit1.23/config.h	Fri Mar 19 07:09:48 1999
++++ GXedit1.23.new/config.h	Tue Apr 27 21:04:43 1999
+@@ -76,14 +76,14 @@
+ 
+ /* paths */
+ 
+-#define NETSCAPE "/usr/local/bin/netscape -remote"
++#define NETSCAPE "/usr/bin/netscape -remote"
+ #define EMACS "/usr/bin/emacs"
+ #define DES "/bin/des"
+ #define IDEA "/bin/idea"
+ #define XTERM "/usr/X11R6/bin/xterm"
+ #define AWK "awk"
+ #define SED "sed"
+-#define VI "vi"
++#define VI "/usr/bin/vi"
+ #define SAY "say"
+ #define CVS "cvs"
+ #define GDB "xterm -e gdb"
