@@ -65,16 +65,13 @@ install -d $RPM_BUILD_ROOT{%{_bindir},%{_applnkdir}/Office/Editors}
 
 install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Office/Editors
 
-gzip -9nf docs/manual.txt docs/manual.ps docs/quickref.txt docs/quickref.ps \
-	README CHANGELOG docs/DEPENDENCIES
-
 %clean
 rm -r $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc {docs/manual.txt,docs/manual.ps,docs/quickref.txt,docs/quickref.ps}.gz
-%doc {README,CHANGELOG,docs/DEPENDENCIES}.gz example.gxeditrc
+%doc docs/manual.txt docs/manual.ps docs/quickref.txt docs/quickref.ps
+%doc README CHANGELOG docs/DEPENDENCIES example.gxeditrc
 
 %attr(755,root,root) %{_bindir}/*
 
