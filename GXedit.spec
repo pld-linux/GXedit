@@ -57,7 +57,7 @@ utiliza o GTK+.
 sed s^/usr/doc/GXedit/^%{_defaultdocdir}/%{name}-%{version}/^g gxedit.c > gxedit.c.new
 mv -f gxedit.c.new gxedit.c
 
-%{__make} OPTFLAGS="%{!?debug:$RPM_OPT_FLAGS}%{?debug:-O0 -g} -Wall" gxe
+%{__make} OPTFLAGS="%{rpmcflags} -Wall" gxe
 
 %install
 rm -rf $RPM_BUILD_ROOT
