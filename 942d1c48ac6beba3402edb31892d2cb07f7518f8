@@ -1,0 +1,3 @@
+- release 10,
+- added time patch with fix time.h bug on current glibc,
+- spec adapterized and now also %{debug} ready.
