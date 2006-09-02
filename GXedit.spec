@@ -16,8 +16,8 @@ Patch1:		%{name}-makefile.patch
 Patch2:		%{name}-nobash.patch
 Patch3:		%{name}-time.patch
 BuildRequires:	gtk+-devel >= 1.2.0
+BuildRequires:	sed >= 4.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
-
 
 %description
 Here is a fast, easy-to-use editor which is both network oriented and
@@ -44,11 +44,9 @@ utiliza o GTK+.
 %patch1 -p1
 %patch2 -p1
 %patch3 -p1
+%{__sed} -i -e s^%{_prefix}/doc/GXedit/^%{_docdir}/%{name}-%{version}/^g gxedit.c
 
 %build
-sed s^/usr/doc/GXedit/^%{_defaultdocdir}/%{name}-%{version}/^g gxedit.c > gxedit.c.new
-mv -f gxedit.c.new gxedit.c
-
 %{__make} OPTFLAGS="%{rpmcflags} -Wall" gxe
 
 %install
@@ -68,8 +66,6 @@ rm -r $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc docs/manual.txt docs/manual.ps docs/quickref.txt docs/quickref.ps
 %doc README CHANGELOG docs/DEPENDENCIES example.gxeditrc
-
 %attr(755,root,root) %{_bindir}/*
-
 %{_desktopdir}/GXedit.desktop
 %{_datadir}/GXedit
