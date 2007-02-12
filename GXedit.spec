@@ -1,7 +1,7 @@
 Summary:	A multi-function text editor using GTK+
-Summary(es.UTF-8):   Editor multifuncional de textos que usa GTK+
-Summary(pl.UTF-8):   Wielofunkcyjny edytor tekstu wykorzystujący GTK+
-Summary(pt.UTF-8):   Editor de textos multifunção que usa o GTK+
+Summary(es.UTF-8):	Editor multifuncional de textos que usa GTK+
+Summary(pl.UTF-8):	Wielofunkcyjny edytor tekstu wykorzystujący GTK+
+Summary(pt.UTF-8):	Editor de textos multifunção que usa o GTK+
 Name:		GXedit
 Version:	1.23
 Release:	14
