@@ -1,7 +1,7 @@
 Summary:	A multi-function text editor using GTK+
-Summary(es):	Editor multifuncional de textos que usa GTK+
-Summary(pl):	Wielofunkcyjny edytor tekstu wykorzystuj±cy GTK+
-Summary(pt):	Editor de textos multifunção que usa o GTK+
+Summary(es.UTF-8):   Editor multifuncional de textos que usa GTK+
+Summary(pl.UTF-8):   Wielofunkcyjny edytor tekstu wykorzystujÄ…cy GTK+
+Summary(pt.UTF-8):   Editor de textos multifunÃ§Ã£o que usa o GTK+
 Name:		GXedit
 Version:	1.23
 Release:	14
@@ -26,16 +26,16 @@ toolbar, network bar and tooltips, spell checking, inline help, the
 ability to send text as e-mail, macros and more. GXedit was designed
 to balance these and many other features without becoming too bloated.
 
-%description -l pl
-Oto szybki, ³atwy w obs³udze edytor, który jest nastawiony na pracê w
+%description -l pl.UTF-8
+Oto szybki, Å‚atwy w obsÅ‚udze edytor, ktÃ³ry jest nastawiony na pracÄ™ w
 sieci, a przy tym bardzo bezpieczny. GXedit jest graficznym edytorem
-tekstu, który dostarcza takich funkcji jak pasek narzêdzi, sprawdzanie
-pisowni, mo¿liwo¶æ wysy³ania tekstu poczt± elektroniczn±, makra i
-wiele innych. GXedit zosta³ zaprojektowany tak, aby obecno¶æ tych i
-wielu innych funkcji nie wp³ywa³a zbytnio na objêto¶æ samego programu.
+tekstu, ktÃ³ry dostarcza takich funkcji jak pasek narzÄ™dzi, sprawdzanie
+pisowni, moÅ¼liwoÅ›Ä‡ wysyÅ‚ania tekstu pocztÄ… elektronicznÄ…, makra i
+wiele innych. GXedit zostaÅ‚ zaprojektowany tak, aby obecnoÅ›Ä‡ tych i
+wielu innych funkcji nie wpÅ‚ywaÅ‚a zbytnio na objÄ™toÅ›Ä‡ samego programu.
 
-%description -l pt_BR
-O GXedit é um editor de textos gráficos com múltiplas funções que
+%description -l pt_BR.UTF-8
+O GXedit Ã© um editor de textos grÃ¡ficos com mÃºltiplas funÃ§Ãµes que
 utiliza o GTK+.
 
 %prep
