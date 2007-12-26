@@ -1,5 +1,4 @@
 [Desktop Entry]
-Encoding=UTF-8
 Name=GXedit
 Comment=Text editor
 Comment[es]=Editor de texto
@@ -9,7 +8,7 @@ Comment[pl]=Edytor tekstu
 Comment[pt]=Editor de texto
 Comment[pt_BR]=Editor de texto
 Exec=gxedit
-Icon=gnome-note.png
+Icon=gnome-note
 Terminal=false
 Type=Application
 Categories=GTK;TextEditor;
