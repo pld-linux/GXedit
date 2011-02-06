@@ -60,7 +60,7 @@ install -d $RPM_BUILD_ROOT{%{_bindir},%{_desktopdir}}
 install %{SOURCE1} $RPM_BUILD_ROOT%{_desktopdir}
 
 %clean
-rm -r $RPM_BUILD_ROOT
+rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
