@@ -40,10 +40,10 @@ utiliza o GTK+.
 
 %prep
 %setup -n %{name}%{version} -q
-%patch0 -p1
-%patch1 -p1
-%patch2 -p1
-%patch3 -p1
+%patch -P0 -p1
+%patch -P1 -p1
+%patch -P2 -p1
+%patch -P3 -p1
 %{__sed} -i -e s^%{_prefix}/doc/GXedit/^%{_docdir}/%{name}-%{version}/^g gxedit.c
 
 %build
